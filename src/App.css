@@ -1,38 +1,80 @@
-.App {
+body {
+  background-color: #2c2f33;
+
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url("../public/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+  }
+}
+
+input {
+  background-color: #1f2122;
+  border: none;
+  height: 15px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+a {
+  color: rgb(38, 157, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.loginForm {
+  background-color: #2c2f33;
+  color: #ffffff;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-muted {
+  color: #a0a0a0
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.loginButton {
   color: white;
+  background-color: #4971ff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 17px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginButton:hover {
+  cursor: pointer;
+  background-color: #4970ffa9;
 }
