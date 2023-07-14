@@ -6,13 +6,16 @@ export default function App() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [loginMsg, setLoginMsg] = useState("")
+  const [msgColor, setMsgColor] = useState("")
 
   const onSubmit = (e) => {
     e.preventDefault()
     if (email === "a.a@a.a" && password === "a") {
       setLoginMsg("Success!")
+      setMsgColor("green")
     } else {
       setLoginMsg("Wrong email or password!")
+      setMsgColor("red")
     }
   }
 
@@ -21,7 +24,7 @@ export default function App() {
       <div className="center">
         <h1>Welcome back!</h1>
         <p className="text-muted">We are so happy to see you again!</p>
-        <p>{loginMsg}</p>
+        <p style={{color:`${msgColor}`}}>{loginMsg}</p>
       </div>
       <form onSubmit={onSubmit}>
         <div className="container">
